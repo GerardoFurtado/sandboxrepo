@@ -4,7 +4,7 @@ import { select, selectAll } from "d3-selection";
 const aspectRatio: number = 0.3;
 
 const svgContainer = select("#chartContainer"),
-	svgContainerNode: Element = svgContainer.node()! as Element,
+	svgContainerNode = svgContainer.node() as HTMLElement,
 	svgContainerWidth: number = svgContainerNode.getBoundingClientRect().width;
 
 const svg = svgContainer
@@ -13,3 +13,4 @@ const svg = svgContainer
 		"viewBox",
 		`0 0 ${svgContainerWidth} ${svgContainerWidth * aspectRatio}`
 	);
+	
