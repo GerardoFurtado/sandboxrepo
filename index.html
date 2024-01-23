@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""
+		/>
+		<title>Wet weather risk</title>
+		<script type="module" crossorigin src="/assets/index-ndCVCsh1.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-hgbiHdWz.css">
+	</head>
+	<body style="margin: 0px;">
+		<div
+			style="
+				display: flex;
+				width: 100%;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				background-color: blanchedalmond;
+			"
+		>
+			<div style="display: flex; width: 600px; flex-direction: column">
+				<div
+					style="
+						display: flex;
+						flex-direction: column;
+						width: auto;
+						margin-bottom: 12px;
+					"
+				>
+					<span>Using geolocation for getting the position:</span>
+					<button
+						style="width: 150px"
+						id="wet-weather-location-button"
+					>
+						Get my location
+					</button>
+				</div>
+				<div
+					class="location-form"
+					style="
+						display: flex;
+						flex-direction: column;
+						margin-bottom: 12px;
+					"
+				>
+					<span>Using the form for getting the position:</span>
+					<input
+						type="text"
+						class="latitude-input"
+						id="wet-weather-latitude-input"
+						placeholder="Latitude"
+						style="width: 150px"
+					/>
+					<div>
+						<input
+							type="text"
+							class="longitude-input"
+							id="wet-weather-longitude-input"
+							placeholder="Longitude"
+							style="width: 150px"
+						/>
+						<button
+							class="submit-button"
+							id="wet-weather-submit-button"
+						>
+							Submit
+						</button>
+					</div>
+				</div>
+				<div
+					style="width: 600px; height: 600px; background-color: white"
+					id="wet-weather-container"
+				></div>
+				<div style="width: 100%; height: 12px"></div>
+				<div
+					id="wet-weather-positive-result"
+					style="display: none"
+				>
+					<span>Text for positive result here</span>
+				</div>
+				<div
+					id="wet-weather-negative-result"
+					style="display: none"
+				>
+					<span>Text for negative result here</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
